@@ -1,0 +1,31 @@
+@font-face {
+    font-family: AdamKubertRegular;
+    src: url(fonts/AdamKubertRegular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-light;
+    src: url(fonts/Roboto-light.ttf);
+}
+
+@font-face {
+    font-family:  Roboto-regular;
+    src: url(fonts/Roboto-regular.ttf);
+}
+
+.one {
+    font-family: AdamKubertRegular;
+}
+
+.two {
+    font-family: Roboto-light;
+}
+
+.three {
+    font-family: Roboto-regular;
+}
+
+div {
+    font-size: 18px;
+    text-align: center;
+}

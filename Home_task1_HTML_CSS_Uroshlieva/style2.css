@@ -1,0 +1,53 @@
+#greeting {
+    margin-bottom: 80px;
+}
+
+#short_line {
+    width: 30%;
+}
+
+#theory {
+    line-height: 2.5
+}
+
+#bold_line {
+    width: 85%;
+    height: 2px;
+    background-color: black;
+}
+
+ol {
+    margin-bottom: 35px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.no_underlining {
+    text-decoration: none;
+    color: black;
+}
+
+
+#additional_info {
+    font-size: small;
+    margin: 50px;
+}
+
+p pre a {
+    font-size: 16px;
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+body {
+    margin-top: 0px;
+}
+
+.verse {
+    font-style: italic;
+}
