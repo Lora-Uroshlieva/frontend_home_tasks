@@ -1,0 +1,30 @@
+@font-face {
+    font-family: RobotoLight;
+    src: url(fonts/RobotoLight.ttf);
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url(fonts/RobotoRegular.ttf);
+}
+
+@font-face {
+    font-family: Elizabeth_Uni;
+    src: url(fonts/Elizabeth_ttUni.ttf);
+}
+
+#first {
+    font-family: RobotoLight;
+}
+
+#second {
+    font-family: RobotoRegular;
+}
+
+#third {
+    font-family: Elizabeth_Uni;
+}
+
+#verse {
+
+}
