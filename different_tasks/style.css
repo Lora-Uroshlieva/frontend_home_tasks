@@ -1,0 +1,62 @@
+body {
+    font-family: Verdana;
+    font-size: 13px;
+    color: black;
+    background: #f3f3f3;
+}
+
+a {
+    color: #cb2c2c;
+    text-decoration: none;
+}
+
+
+h4 + li {
+    color: aqua;
+}
+
+:link {
+    border-bottom: 1px dotted #444;
+}
+
+a:hover {
+    background: yellow;
+}
+
+p:hover {
+    background: darkgrey;
+}
+
+:hover {
+    border: 1px solid blueviolet;
+}
+
+li:nth-last-child(4n) {
+    color: chartreuse;
+}
+li:first-child {
+    background: orchid;
+}
+
+h2::before {
+    content: "some text before element ";
+    font-size: 10px;
+}
+
+a[href$=".jpg"]::after {
+    content: "(jpg-picture)";
+    font-size: 10px;
+    color: #888;
+}
+
+a[href$=".png"]::after {
+    content: "(png-picture)";
+    font-size: 10px;
+    color: #888;
+}
+
+a[href$=".mp3"]::after {
+    content: "(Music .mp3)";
+    font-size: 10px;
+    color: #888;
+}

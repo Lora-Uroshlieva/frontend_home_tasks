@@ -1,1 +1,1 @@
-# html_and_css
+# There are home tasks for PHP-academy courses.
