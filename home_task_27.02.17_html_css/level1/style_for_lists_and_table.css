@@ -1,0 +1,51 @@
+@font-face {
+    font-family: Roboto-regular;
+    src: url(fonts/RobotoRegular.ttf);
+}
+
+#lists {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    font-family: Roboto-regular;
+}
+
+div > h2 {
+    color: #673806;
+
+}
+
+
+.paragraf li {
+    font-weight: 800;
+    font-family: Roboto-regular;
+}
+
+.header li {
+    font-weight: 100;
+}
+
+.header li:hover {
+    border: 1px dotted goldenrod;
+    background-color: burlywood;
+    font-weight: 700;
+}
+
+hr {
+    margin: 20px;
+}
+
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+th {
+    background-color: bisque;
+}
+
+td {
+    background-color: beige;
+}
