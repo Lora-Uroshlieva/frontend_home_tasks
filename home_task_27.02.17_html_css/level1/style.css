@@ -1,3 +1,4 @@
+/*New fonts and styling of part 1*/
 @font-face {
     font-family: RobotoLight;
     src: url(fonts/RobotoLight.ttf);
@@ -33,35 +34,48 @@
     text-align: center;
 }
 
+
+/*Styling for part 2*/
 div {
     border: 1px solid black;
 }
 
 .first-level {
+    float: right;
     position: relative;
     height: 400px;
-    max-width: 800px;
+    width: 800px;
     border-radius: 5%;
 }
 
 .second-level {
     position: absolute;
-    right: 0px;
-    margin: auto 0;
-    height: 50%;
-    width: 50%;
-    border-radius: 5%;
+    left: 50%;
+    margin-top: 100px;
+    height: 200px;
+    width: 400px;
+    border-radius: 6%;
 }
 
 .third-level {
-    height: 30%;
-    width: 20%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    margin-top: -50px;
+    right: 50%;
+
 }
 
 #in_corner {
-    left: 0px;
-    top: 1px;
-    width: 20%;
-    height: 30%;
-    border-radius: 20%;
+    position: absolute;
+    top: -25%;
+    left: 0%;
+    width: 100px;
+    height: 100px;
+    border-radius: 25%;
+
 }
+
+
+/*Styling for part 3*/
