@@ -1,6 +1,5 @@
 body {
     margin: 0 auto;
-    max-width: 768px;
     text-align: center;
 }
 
@@ -10,24 +9,30 @@ header, footer {
     line-height: 100px;
 }
 
-#block_1 {
+.block:first-child {
     background-color: coral;
 }
 
-#block_2 {
+.block:nth-child(2) {
     background-color: blueviolet;
 }
 
-#block_3 {
+.block:nth-child(3) {
     background-color: #cb2c2c;
 }
 
-#block_4 {
+.block:nth-child(4) {
     background-color: aqua;
 }
 
-#block_5 {
+.block:last-child {
     background-color: dodgerblue;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .content {
@@ -35,14 +40,43 @@ header, footer {
     padding: 20px;
     margin: 0;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     background-color: blue;
 }
 
 .block {
     height: 100px;
-    line-height: 100px;
-    width: 98%;
-    margin: auto;
+    margin: 0 auto;
+    flex-grow:1;
+}
+
+@media all and (max-device-width: 768px) {
+    body{max-width: 768px}
+    .block {flex-basis: 100%}
+    .block:first-child {order: 1}
+    .block:nth-child(2) {order: 2}
+    .block:nth-child(3) {order: 3}
+    .block:nth-child(4) {order: 4}
+    .block:last-child {order: 5}
+}
+
+@media all and (max-device-width: 1023px) {
+    body{max-width: 1023px}
+    .block {flex-basis: 50%}
+    .block:first-child {order: 1}
+    .block:nth-child(2) {order: 2}
+    .block:nth-child(3) {order: 3}
+    .block:nth-child(4) {order: 5}
+    .block:last-child {order: 4}
+}
+
+@media all and (min-device-width: 1024px) {
+    body{min-width: 1024px}
+    .block {flex-basis: 33%}
+    .block:first-child {order: 1}
+    .block:nth-child(2) {order: 2}
+    .block:nth-child(3) {order: 3}
+    .block:nth-child(4) {order: 4}
+    .block:last-child {order: 5}
 }
