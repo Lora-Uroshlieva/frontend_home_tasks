@@ -1,0 +1,48 @@
+body {
+    margin: 0 auto;
+    max-width: 768px;
+    text-align: center;
+}
+
+header, footer {
+    background-color: #999999;
+    min-height: 100px;
+    line-height: 100px;
+}
+
+#block_1 {
+    background-color: coral;
+}
+
+#block_2 {
+    background-color: blueviolet;
+}
+
+#block_3 {
+    background-color: #cb2c2c;
+}
+
+#block_4 {
+    background-color: aqua;
+}
+
+#block_5 {
+    background-color: dodgerblue;
+}
+
+.content {
+    width: inherit;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    background-color: blue;
+}
+
+.block {
+    height: 100px;
+    line-height: 100px;
+    width: 98%;
+    margin: auto;
+}
