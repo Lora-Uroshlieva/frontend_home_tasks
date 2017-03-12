@@ -5,26 +5,28 @@
     <title>The calculator</title>
 </head>
 <body>
-<!--Используя swicth  напишите калькулятор для вычисления следующих операций + - * / % ^-->
-<script>
-    var operation = prompt("Enter the math operation (+ - * / % ^): ");
-    var a = prompt("Enter the first number: ");
-    var b = prompt("Enter the second number: ");
-    switch (operation) {
-        case '+': alert(a + b); break;
-        case '-': alert(a - b); break;
-        case '*': alert(a * b); break;
-        case '/':
-            if (b != 0) {
-                alert(a / b); break;
-            }
-            else {
-                alert("Division by zero is forbidden!")
-            }
-        case '%': alert(a % b); break;
-        case '^': alert(Math.pow(a, b));
-    }
+    <script>
+        var operation = prompt("Enter the math operation (+ - * / % ^): ");
+        var a = prompt("Enter the first number: ");
+        var b = prompt("Enter the second number: ");
+        a = +a;
+        b = +b;
+        switch (operation) {
+            case '+': alert(a + b); break;
+            case '-': alert(a - b); break;
+            case '*': alert(a * b); break;
+            case '/':
+                if (b != 0) {
+                    alert(a / b); break;
+                }
+                else {
+                    alert("Division by zero is forbidden!")
+                }
+            case '%': alert(a % b); break;
+            case '^': alert(Math.pow(a, b));
+            default: alert("The operator is incorrect.");
+        }
 
-</script>
+    </script>
 </body>
 </html>
