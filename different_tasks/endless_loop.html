@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Endless loop</title>
+</head>
+<body>
+    <script>
+        var a;
+        for (;;) {
+            a = prompt('Enter the side: l/r');
+            switch (a) {
+                case 'l': {document.write('Go to left' + '<br>')}; continue;
+                case 'r': {document.write('Go to right' + '<br>')}; continue;
+            }
+            break;
+        }
+
+    </script>
+</body>
+</html>

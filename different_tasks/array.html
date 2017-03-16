@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+<script>
+    var a = [1, 2, 3, 5, 'kjjh'];
+    document.write(a);
+    var b = Array(10);
+    document.write('<br>' + b);
+    var laptop = {
+        cpu: "Intel",
+        ram: "4Gb",
+        screen: 15
+    }
+    var ram_ = laptop.ram
+    laptop.battery = 2000;
+    document.write('<br>' +ram_);
+
+    var months = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+        document.write("<ul><li>")
+    var res = months.join('</li><li>');
+    document.write(res);
+    document.write('</li></ul>');
+    document.write(months.slice(3, 5) + '<br>');
+    document.write(months.sort()+"<br>");
+    var arr = [1, 4, 2, 5, 1, 56,34, 3, 8];
+    document.write(arr.sort() + "<br>");
+    arr = arr.sort(function (a, b) {return a-b;});
+    document.write(arr);
+</script>
+</body>
+</html>

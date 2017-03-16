@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        function add(x, y) {
+            return x + y;
+        }
+        function subtract(x, y) {
+            return x - y;
+        }
+        function division(x, y) {
+            if (y == 0) {
+                alert("Division by zero is forbidden!");
+            }
+            else {
+                return x / y;
+            }
+        }
+        function multiplying(x, y) {
+            return x * y;
+        }
+
+        var a = prompt("Enter the first number: ");
+        var operation = prompt("Enter the math operation (+ - * / % ^): ");
+        var b = prompt("Enter the second number: ");
+        var result;
+        a = +a;
+        b = +b;
+        switch (operation) {
+            case '+': result = add(a, b) ; break;
+            case '-': result = subtract(a, b); break;
+            case '*': result = multiplying(a, b); break;
+            case '/': result = division(a, b); break;
+
+            case '%': result = a % b; break;
+            case '^': result = Math.pow(a, b);
+            default: alert("The operator is incorrect.");
+        }
+
+    </script>
+</body>
+</html>
