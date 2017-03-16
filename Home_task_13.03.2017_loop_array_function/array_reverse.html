@@ -7,14 +7,15 @@
 <body>
 <!--Написать функцию реверс масива при помощи деления масива и дополнительной переменной (или без нее=)))-->
 
-<!--Method 1: counting from center-->
+
     <script>
-        var array = [1, 2, 3, 4, 5, 6];
+//      Method 1: counting from center
+
         function array_reverse(array) {
             var len = array.length;
             var left = parseInt(len/2);
             if (len%2) {
-                document.write('The length of loop is odd' + '<br>');
+//                The length of loop is odd
                 var right = left + 2;
                 while (left>=0) {
                     var temp = array[left];
@@ -25,7 +26,7 @@
                 }
             }
             else {
-                document.write('The length of loop is even' + '<br>');
+//                The length of loop is even
                 var right = left + 1;
                 while (left>=0) {
                     var temp = array[left];
@@ -38,10 +39,33 @@
             return array;
         }
 
-        document.write(array_reverse(array));
-        var res = array_reverse(array);
-        document.write('<br' + )
+        var array_1 = [1, 2, 3, 4, 5, 6, 7];
+        document.write('This is a reversed loop by method 1: ')
+        document.write(array_reverse(array_1));
     </script>
 
+    <p>---------------------------------------------------------</p>
+
+    <script>
+//        Method 2: counting from the start
+
+        function array_reverse_2(arr) {
+            var left = 0;
+            var right = arr.length-1;
+            while (left < arr.length/2){
+                var temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left++;
+                right--;
+            }
+        return arr
+        }
+
+        var array_2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.write('This is a reversed loop by method 2: ')
+        document.write(array_reverse_2(array_2));
+
+    </script>
 </body>
 </html>

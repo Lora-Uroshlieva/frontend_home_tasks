@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function array_reverse_2(arr) {
+            var left = 0;
+            var right = arr.length-1;
+            while (left < arr.length/2){
+                arr[right] = [arr[left], arr[left] = arr[right]][0];
+                left++;
+                right--;
+            }
+            return arr
+        }
+
+        var array_3 = [1, 'two', 3, 4, 5, 'six', 7, 8, 9];
+        document.write('This is a reversed loop without using temporary var: ')
+        document.write(array_reverse_2(array_3));
+    </script>
+
+</body>
+</html>
