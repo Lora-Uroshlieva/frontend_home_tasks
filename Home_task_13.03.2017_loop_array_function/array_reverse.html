@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array reverse</title>
+</head>
+<body>
+<!--Написать функцию реверс масива при помощи деления масива и дополнительной переменной (или без нее=)))-->
+
+<!--Method 1: counting from center-->
+    <script>
+        var array = [1, 2, 3, 4, 5, 6];
+        function array_reverse(array) {
+            var len = array.length;
+            var left = parseInt(len/2);
+            if (len%2) {
+                document.write('The length of loop is odd' + '<br>');
+                var right = left + 2;
+                while (left>=0) {
+                    var temp = array[left];
+                    array[left] = array[right];
+                    array[right] = temp;
+                    left--;
+                    right++;
+                }
+            }
+            else {
+                document.write('The length of loop is even' + '<br>');
+                var right = left + 1;
+                while (left>=0) {
+                    var temp = array[left];
+                    array[left] = array[right];
+                    array[right] = temp;
+                    left--;
+                    right++;
+                }
+            }
+            return array;
+        }
+
+        document.write(array_reverse(array));
+        var res = array_reverse(array);
+        document.write('<br' + )
+    </script>
+
+</body>
+</html>
