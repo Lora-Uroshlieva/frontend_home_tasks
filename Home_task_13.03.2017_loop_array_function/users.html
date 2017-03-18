@@ -15,14 +15,13 @@
         name: '',
         sname: '',
         age: '',
-        langs: 'JS, PHP'
+//        langs: 'JS, PHP'
     };
     
     function ask() {
         person.name = prompt('Enter your name: ');
         person.sname = prompt('Enter your surname: ');
         person.age = prompt('Enter your age');
-//        person.age = prompt('Enter programming languages');
         persons.push(person);
     }
     
@@ -34,10 +33,13 @@
     }
 
     function createTable() {
-        for (var i=0; i<persons.length; i++) {
-            document.write(persons[i].name);
-            persons[i] = persons[i].name + '</td><td>' + persons[i].sname + '</td><td>' + persons[i].age;
-            document.write('<br>' + persons);
+//        var string = '';
+//        for (var i=0; i<persons.length; i++) {
+//            for (key in persons[i]) {
+//
+//            }
+//            persons[i] = persons[i].name + '</td><td>' + persons[i].sname + '</td><td>' + persons[i].age;
+//            document.write('<br>' + persons);
         }
         var res = persons.join('</tr><tr>');
         document.write('<table><tr><td>Name</td><td>Surname</td><td>Age</td></tr><tr>');
@@ -57,14 +59,16 @@
 
     var answer2 = confirm('Do you want to look the table with users? ');
     if (answer2) {
-        document.write(answer2);
+//        document.write(answer2);
         document.write('<table><tr><td>Name</td><td>Surname</td><td>Age</td></tr><tr>');
         createTable();
     }
 
 
 </script>
+<script>
 
+</script>
 
 </body>
 </html>

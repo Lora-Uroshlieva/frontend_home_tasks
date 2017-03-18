@@ -23,21 +23,28 @@
         function multiplying(x, y) {
             return x * y;
         }
+        function division_by_module(x, y) {
+            return x%y;
+        }
+        function exponentiation(x, y) {
+            return Math.pow(x, y);
+        }
+        
+        
 
         var a = prompt("Enter the first number: ");
         var operation = prompt("Enter the math operation (+ - * / % ^): ");
         var b = prompt("Enter the second number: ");
         var result;
-        a = +a;
-        b = +b;
+        a = parseInt(a);
+        b = parseInt(b);
         switch (operation) {
             case '+': result = add(a, b) ; break;
             case '-': result = subtract(a, b); break;
             case '*': result = multiplying(a, b); break;
             case '/': result = division(a, b); break;
-
-            case '%': result = a % b; break;
-            case '^': result = Math.pow(a, b);
+            case '%': result = division_by_module(a, b); break;
+            case '^': result = exponentiation(a, b);
             default: alert("The operator is incorrect.");
         }
 
