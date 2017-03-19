@@ -30,23 +30,47 @@
             return Math.pow(x, y);
         }
         
-        
-
-        var a = prompt("Enter the first number: ");
-        var operation = prompt("Enter the math operation (+ - * / % ^): ");
-        var b = prompt("Enter the second number: ");
-        var result;
-        a = parseInt(a);
-        b = parseInt(b);
-        switch (operation) {
-            case '+': result = add(a, b) ; break;
-            case '-': result = subtract(a, b); break;
-            case '*': result = multiplying(a, b); break;
-            case '/': result = division(a, b); break;
-            case '%': result = division_by_module(a, b); break;
-            case '^': result = exponentiation(a, b);
-            default: alert("The operator is incorrect.");
+        function check_input() {
+            for (;;) {
+                var a = prompt("Enter the first number: ");
+                var b = prompt("Enter the second number: ");
+                if (!parseInt(a) || !parseInt(b)) {
+                    alert ('input of numbers was not correct');
+                    continue;
+                }
+                var operation_input = prompt("Enter the math operation (+ - * / % ^): ");
+                var oper = ['+', '-', '*', '/', '%', '^'];
+                if (oper.indexOf(operation_input) < 0) {
+                    alert("The operator is incorrect."); continue;
+                }
+                else {break;}
+            }
+            a = parseInt(a);
+            b = parseInt(b);
+            return [a, b, operation_input];
         }
+
+        function calculator() {
+            var input = check_input();
+            console.log(input);
+            a = input[0];
+            b = input[1];
+            var result;
+            switch (input[2]) {
+                case '+': result = add(a, b) ; break;
+                case '-': result = subtract(a, b); break;
+                case '*': result = multiplying(a, b); break;
+                case '/': result = division(a, b); break;
+                case '%': result = division_by_module(a, b); break;
+                case '^': result = exponentiation(a, b);
+            }
+            document.write('You wrote numbers: ' + a + ', ' + b + '<br>');
+            document.write('The result is: ' + result);
+            return result;
+        }
+
+        calculator();
+
 
     </script>
 </body>

@@ -15,13 +15,14 @@
         name: '',
         sname: '',
         age: '',
-//        langs: 'JS, PHP'
+        langs: 'JS, PHP'
     };
     
     function ask() {
         person.name = prompt('Enter your name: ');
         person.sname = prompt('Enter your surname: ');
         person.age = prompt('Enter your age');
+        person.langs = prompt('Enter programming languages');
         persons.push(person);
     }
     
@@ -29,6 +30,7 @@
         document.write('Name: ' + person.name + '<br>');
         document.write('Surname: ' + person.sname + '<br>');
         document.write('Age: ' + person.age + '<br>');
+        document.write('Languages: ' + person.langs.join(', ') + '<br>');
         document.write('<hr>');
     }
 
@@ -40,19 +42,19 @@
 //            }
 //            persons[i] = persons[i].name + '</td><td>' + persons[i].sname + '</td><td>' + persons[i].age;
 //            document.write('<br>' + persons);
-        }
+
         var res = persons.join('</tr><tr>');
         document.write('<table><tr><td>Name</td><td>Surname</td><td>Age</td></tr><tr>');
         document.write(res);
         document.write('</td></tr></table>');
     }
 
-
     var answer = true;
     for (;;) {
-        answer = confirm("Do you want add a user into the table?");
+        answer = confirm("Do you want add  user into the table?");
         if (answer) {
             ask();
+//            say();
         }
         else {break;}
     }
