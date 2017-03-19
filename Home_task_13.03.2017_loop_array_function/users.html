@@ -9,68 +9,81 @@
 
 </head>
 <body>
-<script>
-    var persons = [];
-    var person = {
-        name: '',
-        sname: '',
-        age: '',
-        langs: 'JS, PHP'
-    };
-    
-    function ask() {
-        person.name = prompt('Enter your name: ');
-        person.sname = prompt('Enter your surname: ');
-        person.age = prompt('Enter your age');
-        person.langs = prompt('Enter programming languages');
-        persons.push(person);
-    }
-    
-    function say() {
-        document.write('Name: ' + person.name + '<br>');
-        document.write('Surname: ' + person.sname + '<br>');
-        document.write('Age: ' + person.age + '<br>');
-        document.write('Languages: ' + person.langs.join(', ') + '<br>');
-        document.write('<hr>');
-    }
+<div id="table"></div>
+    <script>
+        var persons = [
+            {name: 'Ivanov',
+            sname: 'Ivan',
+            age: '25',
+            langs: 'JS, PHP'},
+            {name: 'Petrov',
+                sname: 'Petr',
+                age: '28',
+                langs: 'JS, PHP'}
+        ];
+        var person = {
+            name: '',
+            sname: '',
+            age: '',
+            langs: 'JS, PHP'
+        };
 
-    function createTable() {
-//        var string = '';
-//        for (var i=0; i<persons.length; i++) {
-//            for (key in persons[i]) {
-//
-//            }
-//            persons[i] = persons[i].name + '</td><td>' + persons[i].sname + '</td><td>' + persons[i].age;
-//            document.write('<br>' + persons);
-
-        var res = persons.join('</tr><tr>');
-        document.write('<table><tr><td>Name</td><td>Surname</td><td>Age</td></tr><tr>');
-        document.write(res);
-        document.write('</td></tr></table>');
-    }
-
-    var answer = true;
-    for (;;) {
-        answer = confirm("Do you want add  user into the table?");
-        if (answer) {
-            ask();
-//            say();
+        function ask() {
+            person.name = prompt('Enter your name: ');
+            person.sname = prompt('Enter your surname: ');
+            person.age = prompt('Enter your age');
+            person.langs = prompt('Enter programming languages');
+            persons.push(person);
         }
-        else {break;}
-    }
 
-    var answer2 = confirm('Do you want to look the table with users? ');
-    if (answer2) {
-//        document.write(answer2);
-        document.write('<table><tr><td>Name</td><td>Surname</td><td>Age</td></tr><tr>');
-        createTable();
-    }
+        function say() {
+            document.write('Name: ' + person.name + '<br>');
+            document.write('Surname: ' + person.sname + '<br>');
+            document.write('Age: ' + person.age + '<br>');
+            document.write('Languages: ' + person.langs.join(', ') + '<br>');
+            document.write('<hr>');
+        }
+
+        function createTable() {
+            var table_container = document.getElementById('table');
+            var table = document.createElement('table');
+            table_container.appendChild(table);
+
+            var row = document.createElement('tr');
+            table.appendChild(row);
+            for (key in persons[0]) {
+                var td = document.createElement('td');
+                row.appendChild(td);
+                td.innerHTML = key;
+            }
+
+            for (var i = 0; i < persons.length; i++) {
+                var row = document.createElement('tr');
+                table.appendChild(row);
+                for (item in persons[i]) {
+                    var td = document.createElement('td');
+                    row.appendChild(td);
+                    td.innerHTML = persons[i][item];
+                }
+            }
+        }
+
+        var answer = true;
+        for (;;) {
+            answer = confirm("Do you want add  user into the table?");
+            if (answer) {
+                ask();
+            }
+            else {break;}
+        }
+
+        var answer2 = confirm('Do you want to look the table with users? ');
+        if (answer2) {
+            createTable();
+        }
 
 
-</script>
-<script>
-
-</script>
+    </script>
 
 </body>
 </html>
