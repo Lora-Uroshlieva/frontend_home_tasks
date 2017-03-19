@@ -6,20 +6,41 @@
 </head>
 <body>
     <script>
-        function max(arguments) {
+        function max(a) {
             var max_number = Number.NEGATIVE_INFINITY;
             console.log(arguments + '<br>');
             for (var i = 0; i < arguments.length; i++) {
                 if (arguments[i] > max_number) {
-//                    document.write(arguments[i]);
                     max_number = arguments[i];
                 }
             }
             return max_number;
         }
 
-        var a = max(1, 4, 5, 78, 3, 12, 4, 3, 67, 54);
-        document.write(a);
+        var a = max(1, 4, 5, 789, 3, 12, 4, 3, 67, 534);
+        document.write(a + '<br>');
+
+        function my(a, b) {
+            document.write(a + '<br>');
+            document.write(b + '<br>');
+        }
+
+        my(1, 2, 4);
+
+
+        var func_literal = function () {
+            document.write('Hello' + '<br>');
+        };
+
+        func_literal();
+
+
+        var anonymous_func = (function () {
+            document.write('Hello again' + '<br>');
+        })();
+
+        anonymous_func;
+
     </script>
 </body>
 </html>

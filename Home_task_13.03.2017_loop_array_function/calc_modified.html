@@ -6,29 +6,34 @@
 </head>
 <body>
     <script>
-        function add(x, y) {
+        var add = function (x, y) {
             return x + y;
-        }
-        function subtract(x, y) {
+        };
+
+        var subtract = function (x, y) {
             return x - y;
-        }
-        function division(x, y) {
+        };
+
+        var division = function (x, y) {
             if (y == 0) {
                 alert("Division by zero is forbidden!");
             }
             else {
                 return x / y;
             }
-        }
-        function multiplying(x, y) {
+        };
+
+        var multiplying = function (x, y) {
             return x * y;
-        }
-        function division_by_module(x, y) {
+        };
+
+        var division_by_module = function (x, y) {
             return x%y;
-        }
-        function exponentiation(x, y) {
+        };
+
+        var exponentiation = function (x, y) {
             return Math.pow(x, y);
-        }
+        };
         
         function check_input() {
             for (;;) {
@@ -52,7 +57,6 @@
 
         function calculator() {
             var input = check_input();
-            console.log(input);
             a = input[0];
             b = input[1];
             var result;

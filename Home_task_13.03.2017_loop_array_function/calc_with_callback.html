@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        var add = function (x, y) {
+            return x + y;
+        };
+
+        var subtract = function (x, y) {
+            return x - y;
+        };
+
+        var division = function (x, y) {
+            if (y == 0) {
+                alert("Division by zero is forbidden!");
+            }
+            else {
+                return x / y;
+            }
+        };
+        var multiplying = function (x, y) {
+            return x * y;
+        };
+        var division_by_module = function (x, y) {
+            return x%y;
+        };
+        var exponentiation = function (x, y) {
+            return Math.pow(x, y);
+        };
+
+        function calculate(cb, a, b) {
+            var result = cb(a, b);
+            document.write('The result of operation is equal: ' + result);
+        }
+
+
+
+        var a = prompt("Enter the first number: ");
+        var b = prompt("Enter the second number: ");
+        if (!parseInt(a) || !parseInt(b)) {
+            alert ('input of numbers was not correct');
+        }
+
+        var operation_input = prompt("Enter the math operation (+ - * / % ^): ");
+        var oper_array = ['+', '-', '*', '/', '%', '^'];
+        if (oper_array.indexOf(operation_input) < 0) {
+            alert("The operator is incorrect.");
+        }
+
+        switch (operation_input) {
+            case '+': calculate(add, a, b) ; break;
+            case '-': calculate(subtract, a, b); break;
+            case '*': calculate(multiplying, a, b); break;
+            case '/': calculate(division, a, b); break;
+            case '%': calculate(division_by_module, a, b); break;
+            case '^': calculate(exponentiation, a, b);
+        }
+
+    </script>
+
+</body>
+</html>
