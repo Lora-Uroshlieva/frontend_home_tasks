@@ -1,0 +1,23 @@
+@font-face {
+    font-family: lucida-sans-unicode;
+    src: url(fonts/lucida-sans-unicode.ttf);
+}
+
+body {
+    font-family: "lucida-sans-unicode", SansSerif;
+    font-size: 18px;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", Sans-Serif;
+    font-size: 14px;
+    background: white;
+    width: 50%;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 0 auto 20px;
+}
+
+td {border: 1px solid grey;}
+
+td:first-child {width: 30%;}
