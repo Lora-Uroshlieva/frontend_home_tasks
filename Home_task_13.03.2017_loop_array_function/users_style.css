@@ -3,21 +3,33 @@
     src: url(fonts/lucida-sans-unicode.ttf);
 }
 
-body {
-    font-family: "lucida-sans-unicode", SansSerif;
-    font-size: 18px;
-}
-
 table {
-    font-family: "Lucida Sans Unicode", Sans-Serif;
+    font-family: lucida-sans-unicode, Sans-Serif;
     font-size: 14px;
     background: white;
-    width: 50%;
+    max-width: 70%;
+    width: 70%;
     border-collapse: collapse;
     text-align: left;
-    margin: 0 auto 20px;
 }
 
-td {border: 1px solid grey;}
 
-td:first-child {width: 30%;}
+th {
+    font-weight: normal;
+    color: #039;
+    border-bottom: 2px solid #6678b1;
+    padding: 10px 8px;
+}
+td {
+    border-bottom: 1px solid #ccc;
+    color: #669;
+    padding: 9px 8px;
+    transition: .3s linear;
+}
+tr:hover td{
+    color: #6699ff;
+}
+
+tr:hover td{
+    background: #e8edff;
+}

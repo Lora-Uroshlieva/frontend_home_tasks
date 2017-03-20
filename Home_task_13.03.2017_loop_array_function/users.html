@@ -49,9 +49,9 @@
             var row = document.createElement('tr');
             table.appendChild(row);
             for (key in persons[0]) {
-                var td = document.createElement('td');
-                row.appendChild(td);
-                td.innerHTML = key;
+                var th = document.createElement('th');
+                row.appendChild(th);
+                th.innerHTML = key;
             }
 
             for (var i = 0; i < persons.length; i++) {
