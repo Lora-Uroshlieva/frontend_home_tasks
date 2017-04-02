@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+<script>
+    var human = {
+        firstName: "Alex",
+        lastName: "Ivanov",
+        age: 27,
+        occupation: "<img src='//limg.imgsmail.ru/splash/v/i/logo_wide-b41947b93e-fp.png' width='150' height='40' />",
+        show: function () {
+            document.write("<p>First name: " + this.firstName);
+            document.write("<p>Second name: " + this.lastName);
+            document.write("<p>Age: " + this.age + "<br>");
+            document.write(this.occupation + "<hr />");
+        },
+        changeWork: function (_occupation) {
+            this.occupation = _occupation;
+        }
+    }
+    human.show();
+    human.changeWork("<img src='https://php-academy.kiev.ua/logo.png' width='150' height='40' />");
+    human.show();
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>polymorphism</title>
+</head>
+<body>
+<script>
+    function Shape() {
+        this.area = function () {
+            document.write('<p> Area of this figure is undefined.</p>');
+        }
+    }
+    
+    
+    function Triangle (side_a, side_b, side_c) {
+        this.a = side_a;
+        this.b = side_b;
+        this.c = side_c;
+        this.perimeter = function () {
+            return this.a + this.b + this.c;
+        };
+        this.area = function () {
+            this.p = this.perimeter()/2;
+            this.result = Math.sqrt(this.p*(this.p-this.a)*(this.p-this.b)*(this.p-this.c));
+            document.write("<p> The area of triangle with sides " + this.a + ', ' +
+                this.b + ', ' + this.c + ' is equal ' + this.result + ". </p>");
+            return this.result;
+        }
+    }
+
+    
+    function Square(side) {
+        this.side = side;
+        this.area = function () {
+            this.result = this.side * this.side;
+            document.write("<p> The area of square with sides " + this.side + ' is equal ' + this.result + ".</p>");
+            return this.result;
+        }
+    }
+
+    
+    function Circle(radius) {
+        var pi = 3.1415;
+        this.radius = radius;
+        this.area = function () {
+            this.result = (pi * this.radius * this.radius).toFixed(2);
+            document.write("<p> The area of circle with radius " + this.radius + " is equal " + this.result + ".</p>")
+        }
+    }
+
+    
+    function Rhombus(side, height) {
+        this.side = side;
+        this.height = height;
+        this.area = function () {
+            this.result = this.side * this.height;
+            document.write("<p> The area of rhombus with side " + this.side + " and height " + this.height + " is equal " + this.result + ".</p>");
+            return this.height;
+        }
+        
+    }
+    var shape = new Shape();
+    Triangle.prototype = shape;
+    Square.prototype = shape;
+    Circle.prototype = shape;
+    Rhombus.prototype = shape;
+    var triangle = new Triangle(3, 4, 5);
+    var square = new Square(5);
+    var circle = new Circle(17);
+    var rhombus = new Rhombus(8, 4);
+    shape.area();
+    triangle.area();
+    square.area();
+    circle.area();
+    rhombus.area();
+
+//    square. triangle. a circle. rhombus
+</script>
+
+</body>
+</html>

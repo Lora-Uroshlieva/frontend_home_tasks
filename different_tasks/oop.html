@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP</title>
+</head>
+<body>
+<script>
+
+//    Incapsulation:
+    var Myclass = function () {
+
+        var private_method = function () {
+            document.write('Private method');
+        };
+        this.publicMethod = function () {
+            document.write('This is public method' + '<br>');
+            private_method();
+        };
+    };
+
+    var obj = new Myclass();
+    obj.publicMethod();
+    obj.private_method(); //mistake
+</script>
+
+</body>
+</html>
