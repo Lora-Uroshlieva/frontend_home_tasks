@@ -25,7 +25,6 @@
             this.result = Math.sqrt(this.p*(this.p-this.a)*(this.p-this.b)*(this.p-this.c));
             document.write("<p> The area of triangle with sides " + this.a + ', ' +
                 this.b + ', ' + this.c + ' is equal ' + this.result + ". </p>");
-            return this.result;
         }
     }
 
@@ -35,7 +34,6 @@
         this.area = function () {
             this.result = this.side * this.side;
             document.write("<p> The area of square with sides " + this.side + ' is equal ' + this.result + ".</p>");
-            return this.result;
         }
     }
 
@@ -56,10 +54,10 @@
         this.area = function () {
             this.result = this.side * this.height;
             document.write("<p> The area of rhombus with side " + this.side + " and height " + this.height + " is equal " + this.result + ".</p>");
-            return this.height;
         }
-        
     }
+
+
     var shape = new Shape();
     Triangle.prototype = shape;
     Square.prototype = shape;
@@ -74,6 +72,8 @@
     square.area();
     circle.area();
     rhombus.area();
+
+
 
 //    square. triangle. a circle. rhombus
 </script>

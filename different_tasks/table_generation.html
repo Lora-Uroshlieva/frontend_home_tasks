@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var persons = [ //array of objects
+            {name: 'Ivanov',
+                sname: 'Ivan',
+                age: '25',
+                langs: 'JS, PHP'},
+            {name: 'Petrov',
+                sname: 'Petr',
+                age: '28',
+                langs: 'JS, PHP'}
+        ];
+
+        function load() {
+            var table_container = document.getElementById('table');
+            var table = document.createElement('table');
+            table_container.appendChild(table);
+
+            for (var i=0; i < persons.length; i++) {
+                var row = document.createElement('tr');
+                table.appendChild(row);
+                for (key in persons[i]) {
+                    var data = document.createElement('td');
+                    row.appendChild(data);
+                    data.innerHTML = persons[i][key];
+                }
+            }
+        }
+    </script>
+    <title>Title</title>
+</head>
+
+
+<body onload="load()">
+    <div id="table"></div>
+
+</body>
+</html>
