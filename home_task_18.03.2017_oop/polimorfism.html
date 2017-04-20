@@ -6,76 +6,130 @@
 </head>
 <body>
 <script>
-    function Shape() {
-        this.area = function () {
-            document.write('<p> Area of this figure is undefined.</p>');
-        }
+    function Shape(name) {
+        this.name = name;
+        this.writeArea = function () {
+            console.log(this.area());
+        };
     }
+
     
-    
-    function Triangle (side_a, side_b, side_c) {
+    function Triangle (name, side_a, side_b, side_c) {
+        this.name = name;
         this.a = side_a;
         this.b = side_b;
         this.c = side_c;
         this.perimeter = function () {
             return this.a + this.b + this.c;
         };
-        this.area = function () {
-            this.p = this.perimeter()/2;
-            this.result = Math.sqrt(this.p*(this.p-this.a)*(this.p-this.b)*(this.p-this.c));
-            document.write("<p> The area of triangle with sides " + this.a + ', ' +
-                this.b + ', ' + this.c + ' is equal ' + this.result + ". </p>");
-        }
+        this.p = this.perimeter()/2;
     }
 
     
-    function Square(side) {
+    function Square(name, side) {
+        this.name = name;
         this.side = side;
-        this.area = function () {
-            this.result = this.side * this.side;
-            document.write("<p> The area of square with sides " + this.side + ' is equal ' + this.result + ".</p>");
-        }
     }
 
     
-    function Circle(radius) {
-        var pi = 3.1415;
+    function Circle(name, radius) {
+        this.name = name;
         this.radius = radius;
-        this.area = function () {
-            this.result = (pi * this.radius * this.radius).toFixed(2);
-            document.write("<p> The area of circle with radius " + this.radius + " is equal " + this.result + ".</p>")
-        }
     }
 
     
-    function Rhombus(side, height) {
+    function Rhombus(name, side, height) {
+        this.name = name;
         this.side = side;
         this.height = height;
-        this.area = function () {
-            this.result = this.side * this.height;
-            document.write("<p> The area of rhombus with side " + this.side + " and height " + this.height + " is equal " + this.result + ".</p>");
-        }
     }
 
-
-    var shape = new Shape();
-    Triangle.prototype = shape;
-    Square.prototype = shape;
-    Circle.prototype = shape;
-    Rhombus.prototype = shape;
-    var triangle = new Triangle(3, 4, 5);
-    var square = new Square(5);
-    var circle = new Circle(17);
-    var rhombus = new Rhombus(8, 4);
-    shape.area();
-    triangle.area();
-    square.area();
-    circle.area();
-    rhombus.area();
+    var figure = new Shape('Oktaedr');
+    Circle.prototype = figure;
+    Square.prototype = figure;
+    Triangle.prototype = figure;
+    Rhombus.prototype = figure;
 
 
+    var my_triangle = new Triangle('First triangle', 4, 5, 6);
+    var my_circle = new Circle('First big circle', 50);
+    var my_square = new Square('Little square', 4);
+    var my_rhombus = new Rhombus('Long rhombus', 25, 6);
 
-//    square. triangle. a circle. rhombus
+
+    Circle.prototype.area = function () {
+        return (Math.PI * this.radius * this.radius).toFixed(2);
+    };
+    console.log(my_circle.area()); //method 1
+    my_circle.writeArea(); // method 2 - by using parent method of Shape constructor.
+
+
+    Triangle.prototype.area = function () {
+        return (Math.sqrt(this.p*(this.p-this.a)*(this.p-this.b)*(this.p-this.c))).toFixed(2);
+    };
+    console.log(my_triangle.area());
+//    my_triangle.writeArea();
+
+
+    Square.prototype.area = function () {
+        return this.side * this.side;
+    };
+//    my_square.writeArea();
+
+
+    Rhombus.prototype.area = function () {
+        return this.side * this.height;
+    };
+//    my_rhombus.writeArea();
+
+
+
+
+    //Change method valueOf
+    
+    Rhombus.prototype.valueOf = function () {
+        return this.area();
+    };
+    console.log(my_rhombus);
+
+
+    Triangle.prototype.valueOf = function () {
+        return this.area();
+    };
+
+    Square.prototype.valueOf = function () {
+        return this.area();
+    };
+
+    Circle.prototype.valueOf = function () {
+        return this.area();
+    };
+
+//    console.log(my_triangle.valueOf());
+
+//    Change method toString
+
+    Triangle.prototype.toString = function () {
+        return "Triangle with sides: " + this.a + ', ' + this.b + ', ' + this.c + '. <br>';
+    };
+    document.write(my_triangle);
+    console.log(my_triangle);
+
+    Circle.prototype.toString = function () {
+        return "Circle with radius: " + this.radius + '. <br>';
+    };
+    document.write(my_circle);
+
+    Rhombus.prototype.toString = function () {
+        return "Rhombus with side: " + this.side + ' and height ' + this.height + '. <br>';
+    };
+    document.write(my_rhombus);
+
+    Square.prototype.toString = function () {
+        return "Square with side: " + this.side + '. <br>';
+    };
+    document.write(my_square);
+
 </script>
 
 </body>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Rect(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+    
+    Rect.prototype.getArea = function () {
+        return this.width * this.height;
+    };
+    Rect.prototype.toString = function () {
+        return "This is rectangle";
+    }
+
+    var rect1 = new Rect(10, 20);
+    var rect2 = new Rect(5, 5);
+    
+    console.log(rect1.getArea());
+    console.log(rect2.getArea());
+
+    Rect.prototype.valueOf = function () {
+        return this.getArea();
+    };
+
+    console.log(rect1 + rect2);
+</script>
+</body>
+</html>
