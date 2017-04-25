@@ -288,12 +288,18 @@ h5 span {
     background-color: #3b5998;
     background-position: -42px -44px;
 }
+.social a.icon-facebook.black {
+    background-position: -42px -44px;
+}
 .social a.icon-google {
     background-position: -122px -1px;
 }
 .social a.icon-google:hover {
     border-color: #d95232;
     background-color: #d95232;
+    background-position: -122px -41px;
+}
+.social a.icon-google.black {
     background-position: -122px -41px;
 }
 .social a.icon-pinterest {
@@ -304,6 +310,9 @@ h5 span {
     background-color: #cb2028;
     background-position: -82px -42px;
 }
+.social a.icon-pinterest.black {
+    background-position: -82px -42px;
+}
 .social a.icon-twitter {
     background-position: -2px -2px;
 }
@@ -312,6 +321,83 @@ h5 span {
     background-color: #00aced;
     background-position: -2px -42px;
 }
+.social a.icon-twitter.black {
+    background-position: -2px -42px;
+}
 .team-info {
     margin-top: 45px;
+}
+
+/*formatting for section "brand"*/
+#brand {
+    text-align: center;
+    padding: 60px 0;
+}
+#brand img {
+    margin: 0 25px;
+    vertical-align: middle;
+}
+
+
+/*formatting for section "contact"*/
+#contact {
+    text-align: center;
+    background: #222222 url("img/maps_bg.png") no-repeat right bottom;
+}
+#contact h2.title {
+    color: #fff;
+}
+#message {
+    margin-top: 75px;
+}
+#message .left,
+#message .right {
+    width: 48%;
+}
+#message input[type="text"],
+#message textarea {
+    background: #ffffff;
+    border-radius: 4px;
+    width: 100%;
+    box-shadow: none;
+    margin-bottom: 30px;
+    padding: 20px 15px;
+    font: bold 14px/14px Arial, Sans-serif;
+    color: #222222;
+}
+#message input[type="text"] {
+    height: 50px;
+    border: 1px solid #ccc;
+}
+#message textarea {
+    border: none;
+    height: 210px;
+    resize: none;
+}
+::-webkit-input-placeholder {
+    font: bold 14px/14px Arial, Sans-serif;
+    color: #bbb;
+    text-transform: uppercase;
+}
+::-moz-placeholder {
+    font: bold 14px/14px Arial, Sans-serif;
+    color: #bbb;
+    text-transform: uppercase;
+}
+
+
+#copyright {
+    margin: 25px 0;
+}
+#copyright p {
+    margin-top: 15px;
+    font: 14px/14px Arial sans-serif;
+    color: #555;
+}
+#copyright .social {
+    margin-top: 0;
+    margin-left: 365px;
+}
+.social a.black {
+    background-color: #222222;
 }
