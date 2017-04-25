@@ -248,3 +248,70 @@ h5.title {
 h5 span {
     text-transform: uppercase;
 }
+
+
+
+/*stylisation for container amazing team*/
+#team {
+    text-align: center;
+}
+.team-item {
+    float: left;
+    width: 33.33%;
+}
+.team-item img {
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 7px solid white;
+}
+.category {
+    font: 14px/14px Arial, sans serif;
+    color: #777777;
+}
+.social {
+    margin-top: 10px;
+}
+.social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #222222;
+    border-radius: 50%;
+    margin:0px 3px;
+    background: url("img/social-sprite.png") no-repeat;
+}
+.social a.icon-facebook {
+    background-position: -42px -4px;
+}
+.social a.icon-facebook:hover {
+    border-color: #3b5998;
+    background-color: #3b5998;
+    background-position: -42px -44px;
+}
+.social a.icon-google {
+    background-position: -122px -1px;
+}
+.social a.icon-google:hover {
+    border-color: #d95232;
+    background-color: #d95232;
+    background-position: -122px -41px;
+}
+.social a.icon-pinterest {
+    background-position: -82px -2px;
+}
+.social a.icon-pinterest:hover {
+    border-color: #cb2028;
+    background-color: #cb2028;
+    background-position: -82px -42px;
+}
+.social a.icon-twitter {
+    background-position: -2px -2px;
+}
+.social a.icon-twitter:hover {
+    border-color: #00aced;
+    background-color: #00aced;
+    background-position: -2px -42px;
+}
+.team-info {
+    margin-top: 45px;
+}
