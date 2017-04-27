@@ -1,0 +1,112 @@
+@font-face {
+    font-family: PT_Sans_Narrow_Bold;
+    src: url("fonts/PT_ Sans_Narrow_Bold.ttf");
+}
+
+@font-face {
+    font-family: PT_Sans_Narrow;
+    src: url("fonts/PT_Sans_Narrow.ttf");
+}
+
+body {
+    margin: 0 auto;
+    text-align: left;
+    font-family: PT_Sans_Narrow;
+    font-size: 14px;
+    color: #6c6c6c;
+    max-width: 900px;
+    border: 1px solid darkslategrey;
+    background: #ffffff;
+}
+
+.content, header, footer, #copyright, #review_body {
+    width: inherit;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.block {
+    /*border: 2px solid green;*/
+    /*margin: 5px;*/
+    flex-grow:1;
+    flex-basis: 100%;
+}
+
+.block_inner {
+    /*border: 2px solid red;*/
+    /*margin: 15px;*/
+    flex-grow:1;
+    flex-basis: 100%;
+}
+
+@media all and (min-width: 768px) {
+    .block_inner {flex-basis: 45%}
+    footer .block {flex-basis: 10%}
+    #review_body .avatar {flex-basis: 15%}
+    #review_body .feedback {flex-basis: 80%}
+}
+
+
+ /*header formatting*/
+h3 {
+    font: 20px/20px PT_Sans_Narrow_Bold;
+}
+li {
+    float: right;
+    margin-right: 25px;
+}
+#main_info {
+    margin: 20px 0 18px 28px;
+    text-align: left;
+}
+#menu {
+    margin: 40px 0 18px 0;
+}
+
+
+/*slider formatting*/
+#slider {
+    display: block;
+    background: url("img/bg_slide1.png");
+    height: 432px;
+}
+#slider h2 {
+    font-family: PT_Sans_Narrow_Bold;
+    font-size: 36px;
+    color: #ffffff;
+    margin-top: 216px;
+    margin-left: 41px;
+}
+#slider h3 {
+    font-family: PT_Sans_Narrow_Bold;
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow:  -0.06em -0.06em 0.12em #020202;
+    margin-left: 41px;
+}
+
+
+/*review formatting*/
+#review {
+    min-height: 200px;
+}
+#review_header {
+    background-color: #fff59b;
+    box-shadow:-3px -2px 0px #dfda9f;
+    padding: 8px 15px;
+    max-width: 140px;
+    margin: 16px 0 8px 14px;
+}
+#review_body{
+    margin: 0 0 14px 40px;
+}
+.feedback {
+    font: 18px PT_Sans_Narrow;
+}
+.feedback p:before {
+   content: open-quote;
+    font: 40px PT_Sans_Narrow;
+
+}
